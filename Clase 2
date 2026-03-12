@@ -1,0 +1,8 @@
+Si tuviéramos que entrenar un modelo con este dataset, prediciríamos si un texto fue escrito por un humano o generado por una inteligencia artificial. 
+Para eso usaríamos ML supervisado, ya que el dataset ya tiene una etiqueta que nos dice la respuesta para cada texto, 
+lo que nos permite entrenar al modelo con ejemplos conocidos. El tipo de modelo que usaríamos sería uno de clasificación binaria, 
+que básicamente responde "humano" o "IA". La feature más útil es directamente el texto, ya que a partir de él se pueden detectar patrones en la forma de escribir, 
+la estructura de las oraciones y el vocabulario usado, que suelen ser distintos entre un humano y una IA.
+La columna source también podría ser útil para entender de dónde viene cada texto y mejorar la precisión del modelo.
+
+link dataset: https://www.kaggle.com/datasets/hasanyiitakbulut/ai-and-human-text-dataset
