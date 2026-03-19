@@ -1,0 +1,14 @@
+¿Cuál modelo es mejor?
+El polinómico de grado 2. Lo vemos en los números: tiene menos error (MSE 0.41 vs 0.55) y acierta más (R² 0.69 vs 0.58) cuando lo probamos con datos nuevos.
+La razón es que el precio de una casa no depende de forma simple de cada dato por separado. Hay combinaciones que importan, y el modelo polinómico las captura. El lineal no puede hacer eso.
+
+¿Hay overfitting?
+No de forma preocupante. El overfitting sería si el modelo aprende de memoria los datos de entrenamiento y después falla con datos nuevos.
+Para detectarlo comparamos el R² en train vs test:
+ModeloR² TrainR² TestDiferenciaLineal0.600.580.02 ✅Polinómica g20.730.690.04 ✅
+La diferencia en los dos casos es pequeña, así que ninguno está memorizando. El lineal casi no tiene diferencia pero porque directamente aprende poco de entrada.
+
+¿Qué feature impacta más en el precio?
+MedInc, que es el ingreso promedio del barrio. Tiene una correlación de 0.69 con el precio, la más alta de todas las variables.
+Tiene lógica: en los barrios donde la gente gana más, las casas cuestan más.
+Lo vemos de dos formas: en el gráfico de correlaciones de la sección 2, y en los coeficientes del modelo lineal de la sección 4, donde MedInc aparece primero al ordenar por importancia.
